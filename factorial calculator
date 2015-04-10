@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int F (int N)
+{
+	int x;
+	unsigned long long int Factorial= 1;
+	for(x=1; x<=N; x++)
+	{
+		Factorial = Factorial * x;
+	}
+	return Factorial;
+}
+
+int main ()
+{
+	int N;
+	string S;
+	do
+	{
+		cout<<"Este programa te dira el factorial de un numero"<<endl;
+		cout<<"Dame el numero"<<endl;
+		cin>>N;
+	    unsigned long long int Factorial = F(N);
+		cout<<"El factorial de "<< N <<" es: "<< Factorial <<endl;
+		cout<<"Desea continuar?"<<endl;
+		cin>>S;
+	}while(S == "si" || S != "no");
+	return 0;
+}
